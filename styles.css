@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header - we remove the old solid/gradient background here */
+header {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* Hero Section with background image overlay */
+.hero {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 43, 92, 0.8),
+      rgba(0, 71, 133, 0.8)
+    ),
+    url("IMG_6832.JPG");
+  background-size: cover;       /* Fill the hero area with the image */
+  background-position: center;  /* Center the focal point of the image */
+  background-repeat: no-repeat;
+  position: relative;
+
+  /* Ensure there's enough vertical space to see the image and text */
+  min-height: 400px;
+
+  /* Flexbox to center content horizontally & vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px; /* Spacing around the content */
+}
+
+/* Hero text styling */
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 10px 0 20px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffc107;
+  color: #002b5c;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0a800;
+}
+
+/* Main Content Styling */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.content-section {
+  margin-bottom: 40px;
+}
+
+.content-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #004785;
+  padding-bottom: 10px;
+  color: #004785;
+}
+
+.content-section p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #002b5c;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
