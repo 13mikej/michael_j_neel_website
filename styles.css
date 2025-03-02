@@ -21,19 +21,17 @@ header {
       rgba(255, 255, 255, 0.6),  /* white overlay with 60% opacity */
       rgba(255, 255, 255, 0.6)
     ),
-    url("ai_accountant_office.webp");  /* your new image file name */
-  background-size: cover;       /* Fill the hero area with the image */
-  background-position: center 30%;  /* Shift background down so the top is more visible */
+    url("ai_accountant_office.webp");  /* your background image file name */
+  background-size: cover;      
+  background-position: center 30%;  
   background-repeat: no-repeat;
   position: relative;
-  min-height: 400px;            /* Ensure enough vertical space */
-  
-  /* Flexbox to center content horizontally & vertically */
+  min-height: 400px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60px 20px;           /* Spacing around the content */
+  padding: 60px 20px;
 }
 
 /* Hero text styling */
@@ -41,12 +39,14 @@ header {
   font-size: 3em;
   margin: 0;
   font-weight: bold;
+  color: #000; /* Changed to black */
 }
 
 .hero p {
   font-size: 1.5em;
   margin: 10px 0 20px;
   font-weight: bold;
+  color: #000; /* Changed to black */
 }
 
 /* Call-to-Action Button */
