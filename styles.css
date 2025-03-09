@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; /* Default body font */
+  font-family: 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -19,57 +19,63 @@ header {
   color: #fff;
 }
 
-/* Hero Section - Full Page */
+/* Hero Section */
 .hero {
-  position: relative;                /* For absolutely positioned content */
+  position: relative;  /* for absolutely positioned content */
   width: 100%;
-  min-height: 100vh;                 /* Full viewport height */
-  background: url("IMG_6832.JPG") no-repeat center center;
-  background-size: cover;            /* Image fills entire page */
-  background-color: #fff;
+  min-height: 100vh;   /* full viewport height */
+  background: url("IMG_6832.JPG") no-repeat center top;
+  background-size: contain;  /* see the full image (zoomed out) */
+  background-position: center top; /* align it at the top center */
+  background-color: #fff;    /* fill leftover space if aspect ratio differs */
 }
 
-/* Hero Content - Positioned further to the right */
+/* Hero Content: move further right */
 .hero-content {
   position: absolute;
   top: 40px;
-  right: 200px;  /* Increased offset to move further to the right */
+  right: 300px; /* move even further to the right */
   text-align: right;
 }
 
-/* Hero Headings: Solid black, big block letters */
+/* Name & Title: black text with white outline (multi-layer text-shadow) */
 .hero-content h1,
 .hero-content p {
   font-family: 'Share Tech Mono', monospace;
   margin: 0;
-  color: #000;                /* Ensure text is black */
-  text-transform: uppercase;  /* Block letters */
+  color: #000;
+  text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  /* White outline effect using multiple shadows */
+  text-shadow:
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff;
 }
 
-/* Main headline styling */
+/* Larger Headline */
 .hero-content h1 {
-  font-size: 5em;  /* Larger size */
+  font-size: 5em;
   margin-bottom: 10px;
 }
 
-/* Sub-headline styling */
+/* Tagline just below the headline */
 .hero-content p {
-  font-size: 2.5em;  /* Larger text */
+  font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Connect Button with Yellow Background and Black Outline */
+/* Connect Button: Yellow background, black outline */
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #ffc107;  /* Yellow background */
+  background-color: #ffc107; /* Yellow */
   color: #002b5c;
   text-decoration: none;
   font-size: 1.1em;
-  border: 2px solid #000;     /* Black outline */
+  border: 2px solid #000;    /* black outline */
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Roboto', sans-serif;
@@ -80,7 +86,7 @@ header {
   color: #002b5c;
 }
 
-/* Main Content - Full Width */
+/* Main Content */
 main {
   width: 100%;
   margin: 0;
@@ -88,11 +94,11 @@ main {
   background-color: #fff;
 }
 
-/* Content Section - Full Width, with styling */
+/* Content Section Styling */
 .content-section {
   width: 100%;
   margin-bottom: 40px;
-  padding: 20px 40px; /* Side padding for readability */
+  padding: 20px 40px; /* side padding for readability */
   background-color: #fafafa;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
@@ -118,10 +124,10 @@ main {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background-color: #004785; /* Solid blue line */
+  background-color: #004785; /* blue underline */
 }
 
-/* Paragraphs in Content Sections */
+/* Paragraph Styling in Content Sections */
 .content-section p {
   font-size: 1.2em;
   margin-bottom: 20px;
