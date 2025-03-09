@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Default body font */
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -19,26 +19,26 @@ header {
   color: #fff;
 }
 
-/* Hero Section */
+/* Hero Section - Full Page */
 .hero {
-  position: relative;  /* for absolutely positioned content */
+  position: relative;                /* For absolutely positioned content */
   width: 100%;
-  min-height: 100vh;   /* full viewport height */
+  min-height: 100vh;                 /* Full viewport height */
   background: url("IMG_6832.JPG") no-repeat center top;
-  background-size: contain;  /* see the full image (zoomed out) */
-  background-position: center top; /* align it at the top center */
-  background-color: #fff;    /* fill leftover space if aspect ratio differs */
+  background-size: cover;            /* Fills entire area, no white space */
+  background-position: center 20%;   /* Adjust vertical focus as needed */
+  background-color: #fff;
 }
 
-/* Hero Content: move further right */
+/* Hero Content: Positioned further to the right */
 .hero-content {
   position: absolute;
   top: 40px;
-  right: 300px; /* move even further to the right */
+  right: 300px;  /* Moved further right */
   text-align: right;
 }
 
-/* Name & Title: black text with white outline (multi-layer text-shadow) */
+/* Hero Headings: Black text with white outline for pop effect */
 .hero-content h1,
 .hero-content p {
   font-family: 'Share Tech Mono', monospace;
@@ -46,8 +46,8 @@ header {
   color: #000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* White outline effect using multiple shadows */
-  text-shadow:
+  /* White outline effect using multiple text shadows */
+  text-shadow: 
     -2px -2px 0 #fff,
      2px -2px 0 #fff,
     -2px  2px 0 #fff,
@@ -56,26 +56,26 @@ header {
 
 /* Larger Headline */
 .hero-content h1 {
-  font-size: 5em;
+  font-size: 5em;  /* Adjust size as desired */
   margin-bottom: 10px;
 }
 
-/* Tagline just below the headline */
+/* Tagline: Two lines as specified */
 .hero-content p {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Connect Button: Yellow background, black outline */
+/* Connect Button: Yellow background with black outline */
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #ffc107; /* Yellow */
+  background-color: #ffc107; /* Yellow background */
   color: #002b5c;
   text-decoration: none;
   font-size: 1.1em;
-  border: 2px solid #000;    /* black outline */
+  border: 2px solid #000;    /* Black outline */
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Roboto', sans-serif;
@@ -86,7 +86,7 @@ header {
   color: #002b5c;
 }
 
-/* Main Content */
+/* Main Content - Full Width */
 main {
   width: 100%;
   margin: 0;
@@ -98,7 +98,7 @@ main {
 .content-section {
   width: 100%;
   margin-bottom: 40px;
-  padding: 20px 40px; /* side padding for readability */
+  padding: 20px 40px;
   background-color: #fafafa;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
@@ -124,10 +124,10 @@ main {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background-color: #004785; /* blue underline */
+  background-color: #004785; /* Blue underline */
 }
 
-/* Paragraph Styling in Content Sections */
+/* Paragraphs in Content Sections */
 .content-section p {
   font-size: 1.2em;
   margin-bottom: 20px;
