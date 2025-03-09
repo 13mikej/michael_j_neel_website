@@ -1,63 +1,62 @@
+/* Import Fonts (Alternatively, put <link> in HTML head)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Share+Tech+Mono&display=swap');
+*/
+
 /* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; /* Default body font */
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header */
+/* Header (if you need it) */
 header {
   padding: 0;
   text-align: center;
   color: #fff;
 }
 
-/* Hero Section with background image + semi-transparent overlay */
+/* Hero Section - Full Page */
 .hero {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url("IMG_6832.JPG");
-  background-size: cover;            /* Fill on mobile (default) */
-  background-position: center 30%;   /* Start lower so more face shows on mobile */
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
+  position: relative;                /* Needed for absolutely positioned content */
+  width: 100%;
+  min-height: 100vh;                 /* Full viewport height */
+  background: url("IMG_6832.JPG") no-repeat center top;
+  background-size: contain;          /* Show entire image */
+  background-color: #fff;            /* Fills any leftover space around the image */
 }
 
-/* On desktop, show the entire image (contain) + increase hero height */
-@media (min-width: 1024px) {
-  .hero {
-    background-size: contain;        /* Fits the entire image */
-    background-position: center top; /* Align the image top-center */
-    min-height: 700px;              /* Increase height to show full head */
-  }
+/* Absolutely position your hero text to top-right */
+.hero-content {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  text-align: right;
 }
 
-/* Hero text styling */
-.hero h1 {
-  font-size: 3em;
+/* Hero Headings use the more mechanical font */
+.hero-content h1,
+.hero-content p {
+  font-family: 'Share Tech Mono', monospace;
   margin: 0;
-  font-weight: bold;
   color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.hero p {
-  font-size: 1.5em;
-  margin: 10px 0 20px;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+/* Main headline styling */
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Sub-headline styling */
+.hero-content p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 /* Call-to-Action Button */
@@ -70,40 +69,52 @@ header {
   font-size: 1.1em;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif; /* Button text in Roboto for contrast */
 }
 
 .cta-button:hover {
   background-color: #e0a800;
 }
 
-/* Main Content Styling */
+/* Main Content - Full Width */
 main {
+  width: 100%;
+  margin: 0;
   padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
   background-color: #fff;
 }
 
-/* Content Section Styling */
+/* Content Section - Full Width, with some styling */
 .content-section {
+  width: 100%;
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 20px 40px; /* Increase side padding for readability */
   background-color: #fafafa;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
-  /* Optional subtle shadow */
-  /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+  box-sizing: border-box;
 }
 
-/* Section Headers with a Blue Background */
+/* Section Headers - Full-Width Blue Underline */
 .content-section h2 {
-  display: inline-block;
+  font-family: 'Share Tech Mono', monospace;
   font-size: 2em;
-  margin-bottom: 20px;
-  background-color: #004785; /* Blue background */
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 4px;
+  margin: 0 0 20px;
+  position: relative;
+  padding-bottom: 10px;
+  color: #004785;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content-section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #004785; /* Solid blue line across entire heading */
 }
 
 /* Paragraph Styling in Content Sections */
@@ -121,4 +132,5 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 0.9em;
+  font-family: 'Roboto', sans-serif;
 }
