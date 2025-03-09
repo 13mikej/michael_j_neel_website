@@ -33,47 +33,51 @@ header {
 .hero-content {
   position: absolute;
   top: 40px;
-  right: 40px;
+  right: 100px;  /* Increased offset to move more to the right */
   text-align: right;
 }
 
-/* Hero Headings use the more mechanical font */
+/* Hero Headings use the mechanical font with big, block letters */
 .hero-content h1,
 .hero-content p {
   font-family: 'Share Tech Mono', monospace;
   margin: 0;
   color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Main headline styling */
 .hero-content h1 {
-  font-size: 2.5em;
+  font-size: 4em;  /* Increased size */
   margin-bottom: 10px;
 }
 
 /* Sub-headline styling */
 .hero-content p {
-  font-size: 1.3em;
+  font-size: 2em;  /* Larger text */
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Call-to-Action Button */
+/* Call-to-Action Button with Black Outline */
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
-  background-color: #ffc107;
-  color: #002b5c;
+  background-color: transparent;  /* Transparent background */
+  color: #000;
   text-decoration: none;
   font-size: 1.1em;
+  border: 2px solid #000;  /* Black outline */
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-family: 'Roboto', sans-serif; /* Button text in Roboto for contrast */
 }
 
 .cta-button:hover {
-  background-color: #e0a800;
+  background-color: #000;
+  color: #fff;
 }
 
 /* Main Content - Full Width */
@@ -88,7 +92,7 @@ main {
 .content-section {
   width: 100%;
   margin-bottom: 40px;
-  padding: 20px 40px; /* Increase side padding for readability */
+  padding: 20px 40px; /* Increased side padding for readability */
   background-color: #fafafa;
   border-radius: 4px;
   border: 1px solid #e0e0e0;
