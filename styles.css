@@ -1,3 +1,7 @@
+/* Import Fonts (Alternatively, put <link> in HTML head)
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Share+Tech+Mono&display=swap');
+*/
+
 /* Global Styles */
 body {
   margin: 0;
@@ -8,27 +12,36 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Section */
+/* Header */
+header {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* Hero Section - Aspect Ratio Container */
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  /* Use 'cover' to fill side-to-side, top-to-bottom, no white space */
-  background: url("IMG_6832.JPG") no-repeat center;
-  background-size: cover;
-  background-position: center 10%; /* shift focus up or down */
-  background-color: #fff;
+  /* Remove min-height and use padding-top for aspect ratio; 
+     adjust 56.25% (16:9 ratio) to match your image's aspect ratio */
+  height: auto;
+  padding-top: 56.25%;
+  background: url("IMG_6832.JPG") no-repeat center top;
+  background-size: contain;
+  background-color: #add8e6;  /* Light blue background instead of white */
 }
 
-/* Hero Content */
+/* Hero Content: Positioned over the hero */
 .hero-content {
   position: absolute;
   top: 40px;
   right: 300px;
   text-align: right;
+  width: calc(100% - 300px); /* Ensures the content area is defined */
 }
 
-/* Name & Title: Black with white outline */
+/* Hero Headings: Black text with white outline */
 .hero-content h1,
 .hero-content p {
   font-family: 'Share Tech Mono', monospace;
@@ -36,25 +49,27 @@ body {
   color: #000;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow:
+  text-shadow: 
     -2px -2px 0 #fff,
      2px -2px 0 #fff,
     -2px  2px 0 #fff,
      2px  2px 0 #fff;
 }
 
+/* Larger Headline */
 .hero-content h1 {
   font-size: 5em;
   margin-bottom: 10px;
 }
 
+/* Tagline: Two lines */
 .hero-content p {
   font-size: 2.5em;
   margin-bottom: 20px;
   font-weight: 600;
 }
 
-/* Button */
+/* Connect Button: Yellow background with black outline */
 .cta-button {
   display: inline-block;
   padding: 12px 30px;
@@ -73,7 +88,7 @@ body {
   color: #002b5c;
 }
 
-/* Main Content */
+/* Main Content - Full Width */
 main {
   width: 100%;
   margin: 0;
@@ -81,7 +96,7 @@ main {
   background-color: #fff;
 }
 
-/* Content Section */
+/* Content Sections */
 .content-section {
   width: 100%;
   margin-bottom: 40px;
@@ -92,7 +107,7 @@ main {
   box-sizing: border-box;
 }
 
-/* Section Headers */
+/* Section Headers with Blue Underline */
 .content-section h2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 2em;
@@ -114,7 +129,7 @@ main {
   background-color: #004785;
 }
 
-/* Paragraphs */
+/* Paragraphs in Content Sections */
 .content-section p {
   font-size: 1.2em;
   margin-bottom: 20px;
